@@ -18,18 +18,19 @@
                     <div class="stats shadow ">
                         <div class="stat">
                           <div class="stat-title">Available Blance</div>
-                          <div class="stat-value">4500</div>
+                          <div id="amount_blance" class="stat-value">4500</div>
                         
                         </div>
                       </div>
                       <div class="divider"></div>
                       <div>
-                        <button class="btn btn-lg">Add Money</button>
-                        <button class="btn btn-lg">Cash out</button>
+                        <button id="cash_out_btn" class="btn btn-lg">Cash out</button>
+                        <button id="add_money_btn" class="btn btn-lg">Add Money</button>
                       </div>
                       <div class="divider"></div>
+                      <!-- Add Money code here -->
 
-                      <div class="card bg-base-100  max-w-sm shrink-0 shadow-2xl">
+                      <div id="cash_in_form"  class="card bg-base-100  max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                           <div class="form-control">
                             <label class="label">
@@ -48,7 +49,35 @@
                           </div>
                         </form>
                       </div>
-              
+              <!-- add money code end here -->
+
+              <!-- cash out code start here -->
+
+              <div  id="cash_out_form" class=" hidden card bg-base-100  max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input id="cashout_balance" type="text" placeholder="Enter your Amount" class="input input-bordered" autocomplete="off" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input  id="cashout_pin" type="password" placeholder="Enter your Pin" class="input input-bordered"  required />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="cash_out_input" class="btn btn-primary">Cashout</button>
+                  </div>
+                </form>
+              </div>
+
+                <!-- cash code end here-->
+
+
+
+
 
                
 
@@ -57,5 +86,6 @@
           </div>
     </main>
   <script src="./js/home.js"></script>
+  <script src="./js/cashout.js"></script>
 </body>
 </html>
